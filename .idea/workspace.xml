@@ -5,22 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09f4596c-3b61-4879-995b-9febb7c94f12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/configs/AsyncConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/configs/DataLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/controllers/NoticiaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/controllers/UsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/events/ComentarioAdicionadoEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/events/JornalEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/events/NoticiaPublicadaEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/models/Comentario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/models/Noticia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/models/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/listeners/AuditoriaListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/listeners/NotificacaoListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/repositories/ComentarioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/repositories/NoticiaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/repositories/UsuarioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/services/NoticiaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/Dtos/AutorRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/configs/AsyncConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/configs/DataLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/controllers/NoticiaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/controllers/UsuarioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/events/ComentarioAdicionadoEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/events/JornalEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/events/NoticiaPublicadaEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/models/Comentario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/models/Noticia.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/models/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/listeners/AuditoriaListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/listeners/NotificacaoListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/repositories/ComentarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/repositories/NoticiaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/repositories/UsuarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/services/NoticiaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/configs/AsyncConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/configs/DataLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/controllers/NoticiaController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/controllers/UsuarioController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/events/ComentarioAdicionadoEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/events/JornalEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/events/NoticiaPublicadaEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Comentario$ComentarioBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Comentario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Noticia$Categoria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Noticia$NoticiaBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Noticia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Usuario$PerfilUsuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Usuario$UsuarioBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Usuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/listeners/AuditoriaListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/listeners/NotificacaoListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/repositories/ComentarioRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/repositories/NoticiaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/repositories/UsuarioRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/services/NoticiaService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +75,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -91,6 +121,9 @@
       <workItem from="1776908459644" duration="43000" />
       <workItem from="1776908514671" duration="611000" />
       <workItem from="1776909147133" duration="4376000" />
+      <workItem from="1777149743360" duration="1265000" />
+      <workItem from="1777151035597" duration="1494000" />
+      <workItem from="1777376139859" duration="8257000" />
     </task>
     <servers />
   </component>
