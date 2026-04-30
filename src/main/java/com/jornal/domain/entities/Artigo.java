@@ -38,14 +38,14 @@ public class Artigo {
     private List<String> tags;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "autor_id")
-    private Autor autor;
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
-    @Column(name = "data_criacao")
+    @Column(name = "data_criacao", updatable = false)
     private LocalDateTime dataCriacao;
 
     @Column(name = "data_publicacao")
@@ -53,10 +53,10 @@ public class Artigo {
 
     public Artigo() {}
 
-    public Artigo(String titulo, String conteudo, Autor autor, Categoria categoria) {
+    public Artigo(String titulo, String conteudo, Usuario usuario, Categoria categoria) {
         this.titulo = titulo;
         this.conteudo = conteudo;
-        this.autor = autor;
+        this.usuario = usuario;
         this.categoria = categoria;
         this.status = StatusArtigo.RASCUNHO;
         this.slug = gerarSlug(titulo);
@@ -76,7 +76,7 @@ public class Artigo {
     }
 
     public boolean podePublicar() {
-        return titulo != null && conteudo != null && autor != null && categoria != null;
+        return titulo != null && conteudo != null && usuario != null && categoria != null;
     }
 
     public void publicar() {
@@ -93,7 +93,7 @@ public class Artigo {
     }
 
     public Universidade getUniversidade() {
-        return autor != null ? autor.getUniversidade() : null;
+        return usuario != null ? usuario.getUniversidade() : null;
     }
 
     public UUID getId() { return id; }
@@ -109,8 +109,8 @@ public class Artigo {
     public void setImagemCapa(String imagemCapa) { this.imagemCapa = imagemCapa; }
     public List<String> getTags() { return tags; }
     public void setTags(List<String> tags) { this.tags = tags; }
-    public Autor getAutor() { return autor; }
-    public void setAutor(Autor autor) { this.autor = autor; }
+    public Usuario getUsuario() { return usuario; }
+    public void setUsuario(Usuario usuario) { this.usuario = usuario; }
     public Categoria getCategoria() { return categoria; }
     public void setCategoria(Categoria categoria) { this.categoria = categoria; }
     public LocalDateTime getDataCriacao() { return dataCriacao; }

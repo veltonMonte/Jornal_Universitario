@@ -1,5 +1,6 @@
 package com.jornal.domain.entities;
 
+import com.jornal.domain.valueobjects.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -7,8 +8,8 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(name = "autores")
-public class Autor {
+@Table(name = "usuarios")
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -21,50 +22,52 @@ public class Autor {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(nullable = false, unique = true)
-    private String matricula;
+    @Column(nullable = false)
+    private String senha;
 
-    private String curso;
-    private String bio;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Role role;
 
-    @Column(name = "foto_perfil")
-    private String fotoPerfil;
+    private boolean ativo;
+
+    @Column(name = "data_cadastro", updatable = false)
+    private LocalDateTime dataCadastro;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "universidade_id")
     private Universidade universidade;
 
-    @Column(name = "data_cadastro")
-    private LocalDateTime dataCadastro;
 
-    public Autor() {}
+    public Usuario() {}
 
-    public Autor(String nome, String email, String matricula, String curso, Universidade universidade) {
+    public Usuario(String nome, String email, String senha, Role role, Universidade universidade) {
         this.nome = nome;
         this.email = email;
-        this.matricula = matricula;
-        this.curso = curso;
+        this.senha = senha;
+        this.role = role;
         this.universidade = universidade;
+        this.ativo = true;
     }
 
     @PrePersist
-    public void prePersist() {
-        this.dataCadastro = LocalDateTime.now();
-    }
+    public void prePersist() { this.dataCadastro = LocalDateTime.now(); }
+
+    public void desativar() { this.ativo = false; }
+    public void ativar()    { this.ativo = true;  }
 
     public UUID getId() { return id; }
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
-    public String getMatricula() { return matricula; }
-    public String getCurso() { return curso; }
-    public void setCurso(String curso) { this.curso = curso; }
-    public String getBio() { return bio; }
-    public void setBio(String bio) { this.bio = bio; }
-    public String getFotoPerfil() { return fotoPerfil; }
-    public void setFotoPerfil(String fotoPerfil) { this.fotoPerfil = fotoPerfil; }
+    public String getSenha() { return senha; }
+    public void setSenha(String senha) { this.senha = senha; }
+    public Role getRole() { return role; }
+    public void setRole(Role role) { this.role = role; }
+    public boolean isAtivo() { return ativo; }
+    public LocalDateTime getDataCadastro() { return dataCadastro; }
+
     public Universidade getUniversidade() { return universidade; }
     public void setUniversidade(Universidade universidade) { this.universidade = universidade; }
-    public LocalDateTime getDataCadastro() { return dataCadastro; }
 }

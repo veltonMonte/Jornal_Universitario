@@ -5,48 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09f4596c-3b61-4879-995b-9febb7c94f12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/Dtos/AutorRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/ArtigoRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/ArtigoResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/UsuarioRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/UsuarioResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/UsuarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/entities/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/interfaces/ICategoriaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/interfaces/IUsuarioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/valueobjects/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/config/DataInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/JwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/UsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/exceptions/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/configs/AsyncConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/configs/DataLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/controllers/NoticiaController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/controllers/UsuarioController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/events/ComentarioAdicionadoEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/events/JornalEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/events/NoticiaPublicadaEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/models/Comentario.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/models/Noticia.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/models/Usuario.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/listeners/AuditoriaListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/listeners/NotificacaoListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/repositories/ComentarioRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/repositories/NoticiaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/repositories/UsuarioRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/services/NoticiaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/ArtigoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/ArtigoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/AutorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/UniversidadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/UniversidadeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/entities/Artigo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/entities/Artigo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/entities/Autor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/entities/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/entities/Categoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/interfaces/IArtigoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/interfaces/IArtigoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/interfaces/IAutorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/interfaces/IUniversidadeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/interfaces/IUniversidadeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/ArtigoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/ArtigoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/AutorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/Dtos/AutorRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/UniversidadeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/UniversidadeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/configs/AsyncConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/configs/DataLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/controllers/NoticiaController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/controllers/UsuarioController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/events/ComentarioAdicionadoEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/events/JornalEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/events/NoticiaPublicadaEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Comentario$ComentarioBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Comentario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Noticia$Categoria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Noticia$NoticiaBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Noticia.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Usuario$PerfilUsuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Usuario$UsuarioBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/models/Usuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/listeners/AuditoriaListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/listeners/NotificacaoListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/repositories/ComentarioRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/repositories/NoticiaRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/repositories/UsuarioRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/services/NoticiaService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/application/services/ArtigoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/application/services/ArtigoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/application/services/AutorService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/application/services/UniversidadeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/application/services/UniversidadeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/entities/Artigo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/domain/entities/Artigo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/entities/Autor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/entities/Categoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/domain/entities/Categoria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/interfaces/IArtigoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/domain/interfaces/IArtigoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/interfaces/IAutorRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/ArtigoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/ArtigoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/AutorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/Dtos/AutorRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/UniversidadeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/UniversidadeController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +62,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -72,33 +79,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.JornalUniversitarioApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/velton/IdeaProjects/Jornal_Universitario",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.JornalUniversitarioApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/velton/IdeaProjects/Jornal_Universitario/src/main/java/com/jornal/infrastructure/security&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\velton\IdeaProjects\Jornal_Universitario\src\main\java\com\jornal\infrastructure\security" />
       <recent name="C:\Users\velton\IdeaProjects\Jornal_Universitario" />
     </key>
   </component>
@@ -123,7 +131,9 @@
       <workItem from="1776909147133" duration="4376000" />
       <workItem from="1777149743360" duration="1265000" />
       <workItem from="1777151035597" duration="1494000" />
-      <workItem from="1777376139859" duration="8257000" />
+      <workItem from="1777376139859" duration="8782000" />
+      <workItem from="1777545135430" duration="12152000" />
+      <workItem from="1777568825464" duration="2111000" />
     </task>
     <servers />
   </component>

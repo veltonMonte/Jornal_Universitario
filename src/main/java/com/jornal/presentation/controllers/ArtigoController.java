@@ -1,53 +1,60 @@
 package com.jornal.presentation.controllers;
 
+import com.jornal.application.Dtos.ArtigoRequest;
+import com.jornal.application.Dtos.ArtigoResponse;
 import com.jornal.application.services.ArtigoService;
-import com.jornal.application.usecases.PublicarArtigo;
-import com.jornal.domain.entities.Artigo;
-
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/artigos")
+@RequestMapping("/api/artigos")
 public class ArtigoController {
 
     private final ArtigoService artigoService;
-    private final PublicarArtigo publicarArtigo;
 
-    public ArtigoController(ArtigoService artigoService, PublicarArtigo publicarArtigo) {
+    public ArtigoController(ArtigoService artigoService) {
         this.artigoService = artigoService;
-        this.publicarArtigo = publicarArtigo;
-    }
-
-    @GetMapping
-    public List<Artigo> listar() {
-        return artigoService.listarTodos();
-    }
-
-    @GetMapping("/universidade/{universidadeId}")
-    public List<Artigo> listarPorUniversidade(@PathVariable String universidadeId) {
-        return artigoService.listarPorUniversidade(UUID.fromString(universidadeId));
-    }
-
-    @GetMapping("/{id}")
-    public Artigo buscarPorId(@PathVariable String id) {
-        return artigoService.buscarPorId(UUID.fromString(id));
-    }
-
-    @PostMapping("/publicar/{id}")
-    public Artigo publicar(@PathVariable String id) {
-        return publicarArtigo.executar(UUID.fromString(id));
     }
 
     @PostMapping
-    public Artigo criar(@RequestBody Artigo artigo) {
-        return artigoService.salvar(artigo);
+    public ResponseEntity<ArtigoResponse> criar(@Valid @RequestBody ArtigoRequest req) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(artigoService.criar(req));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<ArtigoResponse>> listar() {
+        return ResponseEntity.ok(artigoService.listarPublicados());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<ArtigoResponse> buscar(@PathVariable UUID id) {
+        return ResponseEntity.ok(artigoService.buscarPorId(id));
+    }
+
+    @GetMapping("/universidade/{universidadeId}")
+    public ResponseEntity<List<ArtigoResponse>> listarPorUniversidade(@PathVariable UUID universidadeId) {
+        return ResponseEntity.ok(artigoService.listarPorUniversidade(universidadeId));
+    }
+
+    @PatchMapping("/{id}/publicar")
+    public ResponseEntity<ArtigoResponse> publicar(@PathVariable UUID id) {
+        return ResponseEntity.ok(artigoService.publicar(id));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ArtigoResponse> atualizar(@PathVariable UUID id,
+                                                    @Valid @RequestBody ArtigoRequest req) {
+        return ResponseEntity.ok(artigoService.atualizar(id, req));
     }
 
     @DeleteMapping("/{id}")
-    public void remover(@PathVariable String id) {
-        artigoService.remover(UUID.fromString(id));
+    public ResponseEntity<Void> remover(@PathVariable UUID id) {
+        artigoService.remover(id);
+        return ResponseEntity.noContent().build();
     }
 }
