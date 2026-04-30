@@ -23,20 +23,19 @@ public class UsuarioController {
 
     // 🔐 Somente ADMIN pode registrar novos usuários agora
     @PostMapping("/registro")
-    @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<UsuarioResponse> registrar(@Valid @RequestBody UsuarioRequest req) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(usuarioService.cadastrar(req));
+    public ResponseEntity<?> registrar(@Valid @RequestBody UsuarioRequest request) {
+        // Se o código chegar aqui, o 400 sumiu!
+        usuarioService.cadastrar(request);
+        return ResponseEntity.ok().build();
     }
 
     @PutMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<UsuarioResponse> atualizar(@PathVariable UUID id, @Valid @RequestBody UsuarioRequest req) {
         return ResponseEntity.ok(usuarioService.atualizar(id, req));
     }
 
     // 🔑 ATUALIZAR SENHA ESPECIFICAMENTE
     @PatchMapping("/{id}/senha")
-    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Void> alterarSenha(@PathVariable UUID id, @RequestBody String novaSenha) {
         usuarioService.alterarSenha(id, novaSenha);
         return ResponseEntity.noContent().build();

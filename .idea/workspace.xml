@@ -5,54 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09f4596c-3b61-4879-995b-9febb7c94f12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/ArtigoRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/ArtigoResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/LoginResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/UsuarioRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/UsuarioResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/UsuarioService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/entities/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/interfaces/ICategoriaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/interfaces/IUsuarioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/valueobjects/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/config/DataInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/JwtFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/UsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/exceptions/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/ArtigoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/ArtigoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/AutorService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/UniversidadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/UniversidadeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/entities/Artigo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/entities/Artigo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/entities/Autor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/entities/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/entities/Categoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/interfaces/IArtigoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/interfaces/IArtigoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/interfaces/IAutorRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/interfaces/IUniversidadeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/interfaces/IUniversidadeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/ArtigoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/ArtigoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/AutorController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/Dtos/AutorRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/UniversidadeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/UniversidadeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/application/services/ArtigoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/application/services/ArtigoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/application/services/AutorService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/application/services/UniversidadeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/application/services/UniversidadeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/entities/Artigo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/domain/entities/Artigo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/entities/Autor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/entities/Categoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/domain/entities/Categoria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/interfaces/IArtigoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/domain/interfaces/IArtigoRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/domain/interfaces/IAutorRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/ArtigoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/ArtigoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/AutorController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/Dtos/AutorRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/UniversidadeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/UniversidadeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/UsuarioRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/UsuarioRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/application/Dtos/UsuarioRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/application/Dtos/UsuarioRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/infrastructure/security/JwtFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/infrastructure/security/JwtFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/infrastructure/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/infrastructure/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/UsuarioController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +94,7 @@
       <workItem from="1777151035597" duration="1494000" />
       <workItem from="1777376139859" duration="8782000" />
       <workItem from="1777545135430" duration="12152000" />
-      <workItem from="1777568825464" duration="2111000" />
+      <workItem from="1777568825464" duration="6010000" />
     </task>
     <servers />
   </component>

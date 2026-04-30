@@ -24,16 +24,13 @@ public class JwtFilter extends OncePerRequestFilter {
     }
 
     @Override
-    protected void doFilterInternal(@NonNull HttpServletRequest request,
-                                    @NonNull HttpServletResponse response,
-                                    @NonNull FilterChain filterChain) throws ServletException, IOException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+            throws ServletException, IOException {
 
-        // 1. Obtém o caminho da requisição
         String path = request.getRequestURI();
 
-        // 2. EXCEÇÃO: Se for uma rota de registro, ignore a validação de token e siga em frente
-        // Verifique se o seu prefixo é realmente /api/...
-        if (path.equals("/api/universidades") || path.equals("/api/usuarios/registro")) {
+        // PULA A VALIDAÇÃO SE FOR REGISTRO (IMPORTANTE PARA EVITAR 403)
+        if (path.equals("/api/usuarios/registro")) {
             filterChain.doFilter(request, response);
             return;
         }
