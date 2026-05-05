@@ -31,7 +31,16 @@ public class AuthService {
         if (!passwordEncoder.matches(req.getSenha(), usuario.getSenha()))
             throw new IllegalArgumentException("E-mail ou senha inválidos");
 
-        String token = jwtUtil.gerar(usuario.getEmail(), usuario.getRole().name());
-        return new LoginResponse(token, usuario.getNome(), usuario.getEmail(), usuario.getRole());
+        String universidadeId = usuario.getUniversidade() != null
+                ? usuario.getUniversidade().getId().toString()
+                : null;
+
+        String sigla = usuario.getUniversidade() != null
+                ? usuario.getUniversidade().getSigla().toLowerCase()
+                : null;
+
+        String token = jwtUtil.gerar(usuario.getEmail(), usuario.getRole().name(), universidadeId);
+
+        return new LoginResponse(token, usuario.getNome(), usuario.getEmail(), usuario.getRole(), universidadeId, sigla);
     }
 }

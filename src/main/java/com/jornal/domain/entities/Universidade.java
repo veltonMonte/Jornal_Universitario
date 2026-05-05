@@ -31,15 +31,23 @@ public class Universidade {
     @Column(name = "data_cadastro")
     private LocalDateTime dataCadastro;
 
+
+    @Column(nullable = false, unique = true, length = 18)
+    private String cnpj;
+
+
     public Universidade() {}
 
-    public Universidade(String nome, String sigla, String cidade, String estado) {
+
+    public Universidade(String nome, String sigla, String cidade, String estado, String cnpj) {
         this.nome = nome;
         this.sigla = sigla;
         this.cidade = cidade;
         this.estado = estado;
+        this.cnpj = cnpj;
         this.ativa = true;
     }
+
 
     @PrePersist
     public void prePersist() {
@@ -56,6 +64,9 @@ public class Universidade {
     public CorHex getCor() {
         return cor != null ? new CorHex(cor) : null;
     }
+
+    public String getCnpj() { return cnpj; }
+    public void setCnpj(String cnpj) { this.cnpj = cnpj; }
 
     public UUID getId() { return id; }
     public String getNome() { return nome; }

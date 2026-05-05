@@ -23,14 +23,19 @@ public class JwtUtil {
         return Keys.hmacShaKeyFor(secret.getBytes());
     }
 
-    public String gerar(String email, String role) {
+    public String gerar(String email, String role, String universidadeId) {
         return Jwts.builder()
                 .setSubject(email)
                 .claim("role", role)
+                .claim("universidadeId", universidadeId)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + expirationMs))
                 .signWith(getKey(), SignatureAlgorithm.HS256)
                 .compact();
+    }
+
+    public String extrairUniversidadeId(String token) {
+        return getClaims(token).get("universidadeId", String.class);
     }
 
     public String extrairEmail(String token) {

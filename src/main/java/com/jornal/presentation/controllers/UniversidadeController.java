@@ -1,5 +1,6 @@
 package com.jornal.presentation.controllers;
 
+import com.jornal.application.Dtos.CadastroUniversidadeRequest;
 import com.jornal.application.services.UniversidadeService;
 import com.jornal.domain.entities.Universidade;
 import org.springframework.http.ResponseEntity;
@@ -35,12 +36,16 @@ public class UniversidadeController {
     }
 
     @PostMapping
-    public ResponseEntity<Universidade> cadastrar(@RequestBody Universidade universidade) {
+    public ResponseEntity<Universidade> cadastrar(@RequestBody CadastroUniversidadeRequest request) {
         Universidade criada = universidadeService.cadastrar(
-                universidade.getNome(),
-                universidade.getSigla(),
-                universidade.getCidade(),
-                universidade.getEstado()
+                request.getNome(),
+                request.getSigla(),
+                request.getCidade(),
+                request.getEstado(),
+                request.getCnpj(),
+                request.getCor(),
+                request.getEmail(),
+                request.getSenha()
         );
         return ResponseEntity.ok(criada);
     }

@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09f4596c-3b61-4879-995b-9febb7c94f12" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/CadastroUniversidadeRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/UsuarioRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/UsuarioRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/JwtFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/application/Dtos/UsuarioRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/application/Dtos/UsuarioRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/infrastructure/security/JwtFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/infrastructure/security/JwtFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/infrastructure/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/infrastructure/security/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jornal/presentation/controllers/UsuarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/Dtos/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/UniversidadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/application/services/UniversidadeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/domain/entities/Universidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/domain/entities/Universidade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/infrastructure/security/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/UniversidadeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jornal/presentation/controllers/UniversidadeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +93,8 @@
       <workItem from="1777151035597" duration="1494000" />
       <workItem from="1777376139859" duration="8782000" />
       <workItem from="1777545135430" duration="12152000" />
-      <workItem from="1777568825464" duration="6010000" />
+      <workItem from="1777568825464" duration="6132000" />
+      <workItem from="1777946246626" duration="2824000" />
     </task>
     <servers />
   </component>
