@@ -2,6 +2,9 @@ package com.jornal.application.Dtos;
 
 import com.jornal.domain.valueobjects.Role;
 
+import lombok.Getter;
+
+@Getter
 public class LoginResponse {
     private String token;
     private String nome;
@@ -18,6 +21,4 @@ public class LoginResponse {
         this.universidadeId = universidadeId;
         this.universidadeSigla = universidadeSigla;
     }
-
-    // getters...
 }

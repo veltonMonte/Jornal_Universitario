@@ -1,8 +1,11 @@
 package com.jornal.presentation.controllers;
 
-import com.jornal.application.Dtos.CadastroUniversidadeRequest;
+
+import com.jornal.application.Dtos.UniversidadeRequest;
+import com.jornal.application.Dtos.UniversidadeResponse;
 import com.jornal.application.services.UniversidadeService;
 import com.jornal.domain.entities.Universidade;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,59 +22,98 @@ public class UniversidadeController {
         this.universidadeService = universidadeService;
     }
 
+    // 🔵 LISTAR
     @GetMapping
-    public ResponseEntity<List<Universidade>> listar() {
-        return ResponseEntity.ok(universidadeService.listarAtivas());
+    public ResponseEntity<List<UniversidadeResponse>> listar() {
+        List<UniversidadeResponse> lista = universidadeService.listarAtivas()
+                .stream()
+                .map(this::toResponse)
+                .toList();
+
+        return ResponseEntity.ok(lista);
     }
 
+    // 🔵 BUSCAR POR ID
     @GetMapping("/{id}")
-    public ResponseEntity<Universidade> buscarPorId(@PathVariable UUID id) {
-        return ResponseEntity.ok(universidadeService.buscarPorId(id));
+    public ResponseEntity<UniversidadeResponse> buscarPorId(@PathVariable UUID id) {
+        Universidade u = universidadeService.buscarPorId(id);
+        return ResponseEntity.ok(toResponse(u));
     }
 
-    // ✅ Ajustado para o nome correto do método no Service
+    // 🔵 BUSCAR POR NOME
     @GetMapping("/nome/{nome}")
-    public ResponseEntity<Universidade> buscarPorNome(@PathVariable String nome) {
-        return ResponseEntity.ok(universidadeService.buscarPorNome(nome));
+    public ResponseEntity<UniversidadeResponse> buscarPorNome(@PathVariable String nome) {
+        Universidade u = universidadeService.buscarPorNome(nome);
+        return ResponseEntity.ok(toResponse(u));
     }
 
+    // 🔵 CADASTRAR
     @PostMapping
-    public ResponseEntity<Universidade> cadastrar(@RequestBody CadastroUniversidadeRequest request) {
+    public ResponseEntity<UniversidadeResponse> cadastrar(
+            @RequestBody @Valid UniversidadeRequest request
+    ) {
         Universidade criada = universidadeService.cadastrar(
                 request.getNome(),
                 request.getSigla(),
                 request.getCidade(),
                 request.getEstado(),
                 request.getCnpj(),
-                request.getCor(),
+                request.getCorHex(),
                 request.getEmail(),
                 request.getSenha()
         );
-        return ResponseEntity.ok(criada);
+
+        return ResponseEntity.ok(toResponse(criada));
     }
 
-    // 🔵 Método PUT para atualizar dados
+    // 🔵 ATUALIZAR
     @PutMapping("/{id}")
-    public ResponseEntity<Universidade> atualizar(@PathVariable UUID id, @RequestBody Universidade universidade) {
+    public ResponseEntity<UniversidadeResponse> atualizar(
+            @PathVariable UUID id,
+            @RequestBody @Valid UniversidadeRequest request
+    ) {
         Universidade atualizada = universidadeService.atualizar(
                 id,
-                universidade.getNome(),
-                universidade.getCidade(),
-                universidade.getEstado(),
-                universidade.getSite()
+                request.getNome(),
+                request.getCidade(),
+                request.getEstado(),
+                request.getSite()
         );
-        return ResponseEntity.ok(atualizada);
+
+        return ResponseEntity.ok(toResponse(atualizada));
     }
 
+    // 🔵 DESATIVAR
     @PutMapping("/{id}/desativar")
     public ResponseEntity<Void> desativar(@PathVariable UUID id) {
         universidadeService.desativar(id);
         return ResponseEntity.noContent().build();
     }
 
+    // 🔵 REMOVER
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> remover(@PathVariable UUID id) {
         universidadeService.remover(id);
         return ResponseEntity.noContent().build();
+    }
+
+
+    private UniversidadeResponse toResponse(Universidade u) {
+        UniversidadeResponse dto = new UniversidadeResponse();
+
+        dto.setId(u.getId());
+        dto.setNome(u.getNome());
+        dto.setSigla(u.getSigla());
+        dto.setCidade(u.getCidade());
+        dto.setEstado(u.getEstado());
+        dto.setSite(u.getSite());
+
+        dto.setCorHex(u.getCor() != null ? u.getCor().getValor() : null);
+
+        dto.setCnpj(u.getCnpj());
+        dto.setAtiva(u.isAtiva());
+        dto.setDataCadastro(u.getDataCadastro());
+
+        return dto;
     }
 }
